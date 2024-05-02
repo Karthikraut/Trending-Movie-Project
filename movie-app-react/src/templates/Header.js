@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import Dropdown from './Dropdown';
 const Header = (data ) => {
   const backgroundImageUrl = data.data?.backdrop_path || data.data?.profile_path;
-  console.log(data.data);
+
   const title = data.data?.original_name || data.data?.original_title; 
   const description = data.data?.overview;
   return (
@@ -35,6 +36,7 @@ const Header = (data ) => {
           Watch Trailer
         </Link>
       </div>
+      
     </div>
   );
 };
