@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App bg-[#1F1E24] h-screen flex">
+    <div className="App bg-[#1F1E24] h-screen flex w-screen overflow-x-hidden">
      <Home/>
     </div>
     </BrowserRouter>
