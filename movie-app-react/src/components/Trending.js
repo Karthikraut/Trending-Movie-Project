@@ -45,10 +45,10 @@ const refreshHandler= ()=>{
   return (
     trending.length>0 ? (<div className="bg-[#1F1E24] w-92  overflow-x-hidden ">
         <div className='w-full h-16 flex items-center '>
-            <h1 className=' text-2xl font-bold text-zinc-400'>
+            <h1 className=' text-2xl font-bold text-zinc-400 m-4 '>
             <i onClick={()=>navigate('/')} className="hover:text-[#6656CD] ri-arrow-left-line"></i>  Trending
             </h1>
-            <div className='flex items-center w-[90%]'>
+            <div className='flex items-center w-[80%]'>
               <TopNav/>
               <Dropdown title="Category" options={["movie","tv","all"]} func={(e)=>setCategory(e.target.value)}/>
               <div className='w-[8%]'></div>
