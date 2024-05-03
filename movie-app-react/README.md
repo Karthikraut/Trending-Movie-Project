@@ -8,4 +8,10 @@
 - 2nd Lecture
     - Create and Give Loading UI 
     - Create Routin for Side Nav Bar
-    -
+    - Use navigate and backword arrow to go backward color should 
+
+-Trending Page
+    - Trending
+    - TopNav
+    - DropDown
+    

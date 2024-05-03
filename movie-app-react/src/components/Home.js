@@ -5,6 +5,7 @@ import Header from '../templates/Header'
 import { OPTIONS } from '../utils/constants'
 import HorizantalCards from '../templates/HorizantalCards'
 import Dropdown from '../templates/Dropdown'
+import Loader from './Loader'
 const Home = () => {
     const [movieInfo, setMovieInfo] =useState();
     const [trending,setIsTrending] = useState();
@@ -40,7 +41,7 @@ const Home = () => {
 
 
   return (
-    movieInfo && trending && <>
+    (movieInfo && trending)? (<>
     <SideNav/>
     <div className='w-[80%] h-full overflow-x-hidden overflow-y-auto'>
         <TopNav/>
@@ -53,7 +54,7 @@ const Home = () => {
         </div>
         <HorizantalCards data={trending}/>
     </div>
-</>
+</>): <Loader/>
   )
 }
 

@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/Home';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Trending from './components/Trending';
+import Loader from './components/Loader';
 
 function App() {
   const appRouter = createBrowserRouter([
@@ -15,6 +16,10 @@ function App() {
     {
       path: "/trending",
       element: <Trending/>
+    },
+    {
+      path: "/loader",
+      element: <Loader/>
     }
   ])
   return (
