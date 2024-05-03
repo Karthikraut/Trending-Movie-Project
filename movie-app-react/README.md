@@ -14,4 +14,9 @@
     - Trending
     - TopNav
     - DropDown
+
+-Popular Page
+    - Build Popular page similar as Trenidng Page
+
+-SAME fOR MOVIE And TV Page.
     
