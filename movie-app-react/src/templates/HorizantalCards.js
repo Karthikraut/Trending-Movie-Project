@@ -1,19 +1,19 @@
 import React from 'react'
 import Dropdown from './Dropdown'
 import { Link } from 'react-router-dom'
-
+import noImg from '../images/OIP.jpg'
 const HorizantalCards = ({data,title}) => {
  
     
   return (
-    <div className=' flex overflow-y-hidden'>
+    <div className=' flex overflow-y-hidden items-center justify-center'>
     {data.map((d,i)=>{
        return (
-                <div key={i} className='min-w-[15%] m-2 h-full bg-zinc-900'>
+                <div key={i} className='min-w-[15%] m-2 h-full bg-zinc-900 flex justify-center'>
                   <Link to={`/${d.media_type|| title}/details/${d.id}`}>
                     
-                        <img className='h-56 p-4' src= {`https://image.tmdb.org/t/p/original/${d.poster_path}`}/>
-                        <h1 className='text-white font-bold'>{d.original_title || d.original_name}</h1>
+                        <img className='h-56 p-4 bg-center' src= {d.poster_path? `https://image.tmdb.org/t/p/original/${d.poster_path}`:noImg }/>
+                        <h1 className='text-white font-bold text-center'>{d.original_title || d.original_name}</h1>
                   
                   </Link>
                 </div>
