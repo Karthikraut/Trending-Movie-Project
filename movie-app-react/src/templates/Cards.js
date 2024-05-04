@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import noImg from "../images/OIP.jpg";
-const Cards = ({data}) => {
-    console.log(" DATA:- ",data);
-
+const Cards = ({data,title}) => {
+    console.log(" Data:- ",data);
+    console.log(" Title:- ", title);
   return (
     <div className='p-6 h-full w-full flex flex-wrap'>
   {data.map((d, i) => (
@@ -18,9 +18,9 @@ const Cards = ({data}) => {
       <h1 className='font-semibold text-2xl p-2 text-white'>
         {d.original_title || d.original_name}
       </h1>
-      <h1 className='bg-yellow-500 rounded-full h-10 w-10 flex justify-center items-center absolute bottom-28 -right-2'>
+      {d.vote_average &&  <h1 className='bg-yellow-500 rounded-full h-10 w-10 flex justify-center items-center absolute bottom-28 -right-2'>
         {(d.vote_average * 10).toFixed()}<sup>%</sup>
-      </h1>
+      </h1>}
     </Link>
   ))}
 </div>

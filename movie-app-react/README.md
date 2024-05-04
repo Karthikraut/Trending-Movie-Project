@@ -20,3 +20,8 @@
 
 -SAME fOR MOVIE And TV Page.
     
+
+- Create a Redux STORE AND MovieSlice and insert addMovie and removeMovie actions in it also create personSlice and tvSlice 
+
+    -Create a child Routes for tvDetails, personDetails,movieDetails use dynamic Id for it `/person/details/:id`
+    

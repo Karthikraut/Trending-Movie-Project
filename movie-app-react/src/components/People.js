@@ -58,7 +58,7 @@ const refreshHandler= ()=>{
             hasMore= {hasMore}
             loader={<h1>Loading....</h1>}
         >
-          <Cards data={people}/>
+          <Cards data={people} title="people"/>
         </InfiniteScroll>
         {/* </div> */}
     </div>):( <Loader/>)

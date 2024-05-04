@@ -7,22 +7,28 @@ import Popular from './components/Popular';
 import Tv from './components/Tv';
 import People from './components/People';
 import Movies from './components/Movies';
-
+import cart from './store/cart';
+import {Provider} from "react-redux"
+import MovieDetails from './components/MovieDetails';
+import TvDetails from './components/TvDetails';
+import PersonDetail from './components/PersonDetail';
 function App() {
   const appRouter = createBrowserRouter([
     {
       path: "/",
       element:( <div className="App bg-[#1F1E24] h-screen flex w-screen overflow-x-hidden">
                       <Home/>
-              </div>)
+              </div>),
+      
     },
     {
       path: "/trending",
-      element: <Trending/>
-    },
-    {
-      path: "/loader",
-      element: <Loader/>
+      element: <Trending/>,
+      children: [
+        {
+          path: "/trending/details/:id",
+        }
+      ]
     },
     {
       path: "/popular",
@@ -30,19 +36,39 @@ function App() {
     },
     {
       path: "/tv",
-      element: <Tv/>
+      element: <Tv/>,
+      children: [
+        {
+          path: "/tv/details/:id",
+          element: <TvDetails/>
+        }
+      ]
     },
     {
       path: "/people",
       element: <People/>,
+      children: [
+        {
+          path: "/people/details/:id",
+          element: <PersonDetail />
+        }
+      ]
     },
     {
-      path: "/movies",
-      element: <Movies/>
+      path: "/movie",
+      element: <Movies/>,
+      children: [
+        {
+          path: "/movie/details/:id",
+          element: <MovieDetails/>
+        }
+      ]
     }
   ])
   return (
-    <RouterProvider router={appRouter}/>
+    <Provider store={cart}>
+      <RouterProvider router={appRouter}/>
+    </Provider>
   );
 }
 
