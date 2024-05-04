@@ -24,11 +24,6 @@ function App() {
     {
       path: "/trending",
       element: <Trending/>,
-      children: [
-        {
-          path: "/trending/details/:id",
-        }
-      ]
     },
     {
       path: "/popular",
@@ -37,32 +32,26 @@ function App() {
     {
       path: "/tv",
       element: <Tv/>,
-      children: [
-        {
-          path: "/tv/details/:id",
-          element: <TvDetails/>
-        }
-      ]
     },
     {
       path: "/people",
       element: <People/>,
-      children: [
-        {
-          path: "/people/details/:id",
-          element: <PersonDetail />
-        }
-      ]
     },
     {
       path: "/movie",
       element: <Movies/>,
-      children: [
-        {
-          path: "/movie/details/:id",
-          element: <MovieDetails/>
-        }
-      ]
+    },
+    {
+      path: "/tv/details/:id",
+      element: <TvDetails/>
+    },
+    {
+      path: "/movie/details/:id",
+      element: <MovieDetails/>
+    },
+    {
+      path: "/people/details/:id",
+      element: <PersonDetail />
     }
   ])
   return (

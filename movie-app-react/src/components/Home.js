@@ -36,7 +36,6 @@ const Home = () => {
    useEffect(()=>{
         !movieInfo && getMovieInfo();
         getTrendingMovies();
-        console.log("CATEGORY",category)
    },[category]);
 
 
@@ -52,7 +51,7 @@ const Home = () => {
               <Dropdown title="Filter" options={["tv","movie","all"]} func={(e)=> setCategory(e.target.value)} />
           </div>
         </div>
-        <HorizantalCards data={trending}/>
+        <HorizantalCards data={trending} title={category}/>
     </div>
 </>): <Loader/>
   )

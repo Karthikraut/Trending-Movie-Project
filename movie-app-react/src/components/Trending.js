@@ -17,7 +17,7 @@ const Trending = () => {
   const getTrending= async()=>{
     const data = await  fetch(`https://api.themoviedb.org/3/trending/${category}/${duration}?page=${page}`,OPTIONS);
     const jsonData =await data.json();
-    console.log(" JSON DATA:- ", jsonData);
+
     if(jsonData?.results?.length>0){
       setTrending((prevState)=>([...prevState,...jsonData.results]));
       setPage(page+1);

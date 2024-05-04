@@ -16,7 +16,7 @@ const People = () => {
   const getPeople= async()=>{
     const data = await  fetch(`https://api.themoviedb.org/3/person/${category}?page=${page}`,OPTIONS);
     const jsonData =await data.json();
-    console.log(" JSON DATA:- ", jsonData);
+
     if(jsonData?.results?.length>0){
       setPeople((prevState)=>([...prevState,...jsonData.results]));
       setPage(page+1);

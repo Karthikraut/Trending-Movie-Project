@@ -2,12 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import noImg from "../images/OIP.jpg";
 const Cards = ({data,title}) => {
-    console.log(" Data:- ",data);
-    console.log(" Title:- ", title);
+
   return (
     <div className='p-6 h-full w-full flex flex-wrap'>
   {data.map((d, i) => (
-    <Link key={i} className='relative w-56 p-2 m-6'>
+    <Link to={`/${d.media_type || title}/details/${d.id}`} key={i} className='relative w-56 p-2 m-6'>
       <img 
         className='shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] object-cover' 
         src={(d.poster_path || d.profile_path) ? 

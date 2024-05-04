@@ -26,7 +26,7 @@ const Header = (data ) => {
       <div className='p-10 w-full h-[60vh] flex  flex-col items-start justify-end '>
         <h1 className='text-5xl font-bold ml-2'>{title}</h1>
         <h1 className='w-2/3 ml-2 my-4 text-left'>
-          {description?.slice(0,300)} <Link className='text-blue-400'>...more</Link>
+          {description?.slice(0,300)} <Link to={`/${data.data.media_type}/details/${data.data.id}`} className='text-blue-400'>...more</Link>
         </h1>
         <h1 className='text-md'>
         <i className="text-yellow-200 ri-megaphone-fill"></i> {data.data?.first_air_date || "No Information"}

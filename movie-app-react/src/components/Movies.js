@@ -16,7 +16,6 @@ const Movies = () => {
   const getPopular= async()=>{
     const data = await  fetch(`https://api.themoviedb.org/3/movie/${category}?page=${page}`,OPTIONS);
     const jsonData =await data.json();
-    console.log(" JSON DATA:- ", jsonData);
     if(jsonData?.results?.length>0){
       setMovies((prevState)=>([...prevState,...jsonData.results]));
       setPage(page+1);
