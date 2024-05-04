@@ -45,7 +45,13 @@ function App() {
     },
     {
       path: "/tv/details/:id",
-      element: <TvDetails/>
+      element: <TvDetails/>,
+      children: [
+        {
+          path: "/tv/details/:id/trailer",
+          element: <TvDetails/>
+        }
+      ]
     },
     {
       path: "/movie/details/:id",

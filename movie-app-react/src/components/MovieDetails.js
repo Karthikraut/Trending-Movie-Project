@@ -54,7 +54,7 @@ const MovieDetails = () => {
         </nav>
 
       {/* Part 2: Poster and Details */}
-        <div className='p-4  flex h-[60%]'>
+        <div className='p-4  flex h-[60%] mb-10'>
             <img 
                 className='shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] object-cover h-[50vh] ' 
                 src={(info.details.poster_path || info.details.profile_path) ? 
@@ -91,7 +91,7 @@ const MovieDetails = () => {
                     <h1 className='font-semibold text-2xl my-4'>Translated in Languages</h1>
                     <p className='mb-6'>{info.translation.translations.map((e)=> e.name).join(", ")}</p>
 
-                    <Link to={`${path.pathname}/trailer`} className='bg-[#6556CD] h-4 w-4 p-4 rounded-lg ml-10' >
+                    <Link to={`${path.pathname}/trailer`} className='bg-[#6556CD] h-4 w-4 p-4 rounded-lg ml-10 ' >
                         <i className="text-xl ri-play-fill"></i> Play Trailer
                     </Link>
             </div>
@@ -136,9 +136,10 @@ const MovieDetails = () => {
 
        
         {/* Part 4: Recommedations */}
-       { (info.recommendations.length!=0 )? (<div className='mt-10'>
-        <hr className='h-[2px] border-none bg-zinc-500'/>
-            <h1 className='text-3xl font-bold my-2'>Recommedations & Similar Stuff</h1>
+       { (info.recommendations.length!=0 )? (
+       <div className='mt-10 '>
+        {/* <hr className='h-[2px] border-none bg-zinc-500 my-8'/> */}
+            <h1 className='text-3xl font-bold '>Recommedations & Similar Stuff</h1>
             <HorizantalCards data={info.recommendations.results} title='movie'/>
         </div>) : (<h1 className='text-2xl text-white'></h1>)}
 
