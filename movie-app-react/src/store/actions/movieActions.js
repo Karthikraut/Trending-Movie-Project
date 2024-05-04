@@ -15,11 +15,12 @@ export const asyncLoadMovie =  (id)=>async (dispatch,getState)=>{
         const externalId = await externalIdData.json()
         const recommendations = await recommendationsData.json()
         const similar = await similarData.json()
-        const videos = await videosData.json()
+        const videos = await videosData.json();
+        const trailer = videos.results.find((e)=>e.type == "Trailer");
         const watchProvider = await watchProviderData.json();
         const translation = await translationData.json();
-        console.log({details:details,externalId:externalId,recommendations: recommendations, similar: similar,videos:videos,watchProvider:watchProvider, translation: translation});
-        dispatch(loadMovie({details:details,externalId:externalId,recommendations: recommendations, similar: similar,videos:videos,watchProvider:watchProvider, translation: translation}));
+        console.log({details:details,externalId:externalId,recommendations: recommendations, similar: similar,videos:trailer,watchProvider:watchProvider, translation: translation});
+        dispatch(loadMovie({details:details,externalId:externalId,recommendations: recommendations, similar: similar,videos:trailer,watchProvider:watchProvider, translation: translation}));
 
     } catch(error){
         console.log(" Error:- ",error);

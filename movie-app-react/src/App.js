@@ -48,15 +48,17 @@ function App() {
     },
     {
       path: "/movie/details/:id",
-      element: <MovieDetails/>
+      element: <MovieDetails/>,
+      children: [
+        {
+          path: "/movie/details/:id/trailer",
+          element: <MovieTrailer/>
+        }
+      ]
     },
     {
       path: "/people/details/:id",
       element: <PersonDetail />
-    },
-    {
-      path: "/movie/details/:id/trailer",
-      element: <MovieTrailer/>
     }
   ])
   return (

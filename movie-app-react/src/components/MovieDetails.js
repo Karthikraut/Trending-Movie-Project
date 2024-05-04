@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { asyncLoadMovie, removeMovie } from '../store/actions/movieActions';
 import noImg from "../images/OIP.jpg";
 import Loader from './Loader';
@@ -91,8 +91,8 @@ const MovieDetails = () => {
                     <h1 className='font-semibold text-2xl my-4'>Translated in Languages</h1>
                     <p className='mb-6'>{info.translation.translations.map((e)=> e.name).join(", ")}</p>
 
-                    <Link to={`${path.pathname}/trailer`} className='bg-[#6556CD] h-4 w-4 p-4 rounded-lg ml-12' >
-                    <i className="text-xl ri-play-fill"></i> Play Trailer
+                    <Link to={`${path.pathname}/trailer`} className='bg-[#6556CD] h-4 w-4 p-4 rounded-lg ml-10' >
+                        <i className="text-xl ri-play-fill"></i> Play Trailer
                     </Link>
             </div>
         </div>
@@ -140,8 +140,10 @@ const MovieDetails = () => {
         <hr className='h-[2px] border-none bg-zinc-500'/>
             <h1 className='text-3xl font-bold my-2'>Recommedations & Similar Stuff</h1>
             <HorizantalCards data={info.recommendations.length >0 ? info.recommendations.results:info.similar.results} title='movie'/>
-
         </div>
+
+        {/* Trailer Outlet */}
+        <Outlet/>
     </div>) : <Loader/>
   )
 }
