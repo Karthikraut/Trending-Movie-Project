@@ -25,3 +25,5 @@
 
     -Create a child Routes for tvDetails, personDetails,movieDetails use dynamic Id for it `/person/details/:id`
     
+- Overview 
+- Movie Translations

@@ -42,7 +42,7 @@ const TopNav = () => {
 
         <div className='bg-zinc-200 w-[50%] max-h-[50vh] absolute top-[80%] overflow-auto left-[5%]'>
            {searches.map( (s,i)=>
-             (<Link className='text-zinc-600 font-semibold hover:text-black hover:bg-zinc-600 duration-300 w-full flex justify-start items-center border-b-2 border-zinc-100 p-10' >
+             (<Link to={`/${s.media_type}/details/${s.id}`} className='text-zinc-600 font-semibold hover:text-black hover:bg-zinc-600 duration-300 w-full flex justify-start items-center border-b-2 border-zinc-100 p-10' >
              <img className="w-[10vh] h-[10vh] object-cover rounded mr-5" 
                 src= {s.backdrop_path || 
                       s.profile_path ? 

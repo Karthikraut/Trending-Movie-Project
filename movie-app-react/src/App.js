@@ -12,6 +12,7 @@ import {Provider} from "react-redux"
 import MovieDetails from './components/MovieDetails';
 import TvDetails from './components/TvDetails';
 import PersonDetail from './components/PersonDetail';
+import MovieTrailer from './components/MovieTrailer';
 function App() {
   const appRouter = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ function App() {
     {
       path: "/people/details/:id",
       element: <PersonDetail />
+    },
+    {
+      path: "/movie/details/:id/trailer",
+      element: <MovieTrailer/>
     }
   ])
   return (
