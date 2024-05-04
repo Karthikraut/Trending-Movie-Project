@@ -136,11 +136,11 @@ const MovieDetails = () => {
 
        
         {/* Part 4: Recommedations */}
-        <div className='mt-10'>
+       { (info.recommendations.length!=0 )? (<div className='mt-10'>
         <hr className='h-[2px] border-none bg-zinc-500'/>
             <h1 className='text-3xl font-bold my-2'>Recommedations & Similar Stuff</h1>
-            <HorizantalCards data={info.recommendations.length >0 ? info.recommendations.results:info.similar.results} title='movie'/>
-        </div>
+            <HorizantalCards data={info.recommendations.results} title='movie'/>
+        </div>) : (<h1 className='text-2xl text-white'></h1>)}
 
         {/* Trailer Outlet */}
         <Outlet/>
