@@ -8,7 +8,7 @@ const Contact = () => {
           <div>
             <p className="text-3xl font-bold text-[#6556cd] dark:text-[#6556cd]">Contact me</p>
             <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Connect with me.</h1>
-            <p className="mt-3 text-gray-500 dark:text-gray-400">We’d love to hear from you. Please fill out this form or shoot us an email.</p>
+            <p className="mt-3 text-gray-500 dark:text-gray-400">I will love to connect with you. Please contact me here!!</p>
           </div>
 
           <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
