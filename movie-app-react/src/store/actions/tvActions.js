@@ -18,7 +18,7 @@ export const asyncLoadTv = (id)=> async(dispatch, getState)=>{
         // const trailer = videos.results.find((e)=>e.type == "Trailer");
         const watchProvider = await watchProviderData.json();
         const translation = await translationData.json();
-        console.log("details",details)
+
         dispatch(loadTv({details:details,externalId:externalId,recommendations: recommendations, similar: similar,videos:videos,watchProvider:watchProvider, translation: translation}));
      }catch(error){
         console.log("Error:- ",error);

@@ -42,10 +42,10 @@ const MovieDetails = () => {
         <nav className='w-full text-white flex h-[10%] gap-7 p-4 text-xl  '>
             <Link to={'/'} className="hover:text-[#6556CD] ri-arrow-left-line"></Link>
             <a target='_blank' href={`${info.details.homepage}`} >
-                <i class="ri-send-plane-fill"></i>
+                <i className="ri-send-plane-fill"></i>
             </a>
             <a target='_blank' href={`https://www.wikidata.org/wiki/${info.externalId.wikidata_id}`} >
-                <i class="ri-earth-fill"></i>
+                <i className="ri-earth-fill"></i>
             </a>
             <a target='_blank' href={`https://www.imdb.com/title/${info.externalId.imdb_id}/`} >
                 <span>IMDB</span>
