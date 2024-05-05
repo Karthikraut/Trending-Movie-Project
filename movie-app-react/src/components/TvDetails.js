@@ -16,7 +16,9 @@ const TvDetails = () => {
 
   useEffect(()=>{
     dispatch(asyncLoadTv(id));
-    return ()=> (dispatch(removeTv))
+    return ()=> {
+        (dispatch(removeTv))
+    }
   },[id])
   return (
     info?(  
@@ -132,10 +134,23 @@ const TvDetails = () => {
         {/* Part 5 Seasons */}
         { (info.details?.seasons.length!=0 )? (
        <div className='mt-10 '>
-        {/* <hr className='h-[2px] border-none bg-zinc-500 my-8'/> */}
-            <h1 className='text-3xl font-bold '>Seasons</h1>
-            <HorizantalCards data={info.details.seasons} title='movie'/>
-        </div>) : (<h1 className='text-2xl text-white'></h1>)}
+          <h1 className='text-3xl font-bold m-2 w-32'>Seasons</h1>
+               <div className='flex overflow-auto '>
+                    {(info.details.seasons).map((d,i) =>
+                        <div to={`/${d.media_type}/details/${d.id}`} key={i} className='relative w-64 p-2 m-1'>
+                            <img 
+                            className='shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] object-cover' 
+                            src={(d.poster_path || d.profile_path) ? 
+                                (`https://image.tmdb.org/t/p/original/${d.poster_path}`)
+                                : noImg}
+                            />
+                            <h1 className='font-semibold text-2xl p-2 text-white w-52 text-center'>
+                            {d.name}
+                            </h1>
+                      </div>
+                    )}
+               </div>
+       </div>) : (<h1 className='text-2xl text-white'></h1>)}
        
         {/* Part 4: Recommedations */}
        { (info.recommendations.length!=0 )? (

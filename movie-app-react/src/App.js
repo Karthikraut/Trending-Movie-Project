@@ -14,6 +14,7 @@ import TvDetails from './components/TvDetails';
 import PersonDetail from './components/PersonDetail';
 import MovieTrailer from './components/MovieTrailer';
 import NotFound from './templates/NotFound';
+import TvTrailer from './components/TvTrailer';
 function App() {
   const appRouter = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ function App() {
       children: [
         {
           path: "/tv/details/:id/trailer",
-          element: <TvDetails/>
+          element: <TvTrailer/>
         }
       ]
     },
