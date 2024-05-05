@@ -7,6 +7,7 @@ import HorizantalCards from '../templates/HorizantalCards'
 import Dropdown from '../templates/Dropdown'
 import Loader from './Loader'
 const Home = () => {
+  document.title = "FilmFusion | Home"
     const [movieInfo, setMovieInfo] =useState();
     const [trending,setIsTrending] = useState();
     const [category,setCategory] =useState('all');

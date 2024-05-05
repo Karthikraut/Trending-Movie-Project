@@ -12,8 +12,9 @@ const Movies = () => {
   const [movies,setMovies] =useState([]);
   const [page,setPage] =useState(1);
   const [hasMore,setHasmore] =useState(true)
-
+  
   const getPopular= async()=>{
+    document.title = "FilmFusion | Movie"
     const data = await  fetch(`https://api.themoviedb.org/3/movie/${category}?page=${page}`,OPTIONS);
     const jsonData =await data.json();
     if(jsonData?.results?.length>0){

@@ -15,6 +15,8 @@ import PersonDetail from './components/PersonDetail';
 import MovieTrailer from './components/MovieTrailer';
 import NotFound from './templates/NotFound';
 import TvTrailer from './components/TvTrailer';
+import About from './components/About';
+import Contact from './components/Contact';
 function App() {
   const appRouter = createBrowserRouter([
     {
@@ -67,6 +69,14 @@ function App() {
     {
       path: "/people/details/:id",
       element: <PersonDetail />
+    },
+    {
+      path: "/about",
+      element: <About/>
+    },
+    {
+      path: "/contact",
+      element: <Contact/>
     },
     {
       path: "*",

@@ -7,6 +7,7 @@ import Cards from '../templates/Cards';
 import Loader from './Loader';
 import InfiniteScroll from 'react-infinite-scroll-component'
 const Popular = () => {
+  document.title = "FilmFusion | Popular"
   const navigate =useNavigate();
   const [category,setCategory] =useState("movie");
   const [popular,setpopular] =useState([]);

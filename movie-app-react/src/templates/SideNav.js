@@ -27,10 +27,10 @@ const SideNav = () => {
         </nav>
         <hr className='border-none h-[1px] bg-zinc-400 '/>
         <nav className='flex flex-col text-zinc-400 text-md gap-3 text-lg'>
-            <Link to={"/trending"} className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg p-5">
+            {/* <Link to={"/about"} className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg p-5">
                 <i className="ri-information-fill"></i> About
-            </Link>
-            <Link className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg p-5">
+            </Link> */}
+            <Link to={"/contact"}className="hover:bg-[#6556CD] hover:text-white duration-300 rounded-lg p-5 mt-4">
             <i className="ri-phone-fill"></i> Contact
             </Link>
         </nav>

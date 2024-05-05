@@ -7,6 +7,7 @@ import Cards from '../templates/Cards';
 import Loader from './Loader';
 import InfiniteScroll from 'react-infinite-scroll-component'
 const Shows = () => {
+  document.title = "FilmFusion | Tv"
   const navigate =useNavigate();
   const [category,setCategory] =useState("airing_today");
   const [show,setShow] =useState([]);

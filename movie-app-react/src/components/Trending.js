@@ -7,6 +7,7 @@ import Cards from '../templates/Cards';
 import Loader from './Loader';
 import InfiniteScroll from 'react-infinite-scroll-component'
 const Trending = () => {
+  document.title = "FilmFusion | Trending"
   const navigate =useNavigate();
   const [category,setCategory] =useState("all");
   const [duration,setDuration] = useState("week");
