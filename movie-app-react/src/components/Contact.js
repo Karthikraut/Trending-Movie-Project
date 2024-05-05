@@ -21,7 +21,7 @@ const Contact = () => {
                 </span>
 
                 <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Email</h2>
-                <p className="mt-2 text-sm text-[#6556cd] dark:text-[#6556cd]">karthikraut2@gmail.com</p>
+                <p className="mt-2 text-sm text-zinc-200 hover:text-[#6556cd]">karthikraut2@gmail.com</p>
               </div>
 
               <div>
@@ -31,24 +31,24 @@ const Contact = () => {
                   </svg>
                 </span>
                 
-                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Phone</h2>
-                <p className="mt-2 text-sm text-[#6556cd] dark:text-[#6556cd]">996-0566-170</p>
+                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-zinc-200">Phone</h2>
+                <p className="mt-2 text-sm text-zinc-200 hover:text-[#6556cd]">996-0566-170</p>
               </div>
 
               <div>
                 <a href="https://github.com/Karthikraut" target="_blank" rel="noopener noreferrer">
                   <i className="text-[#6556cd] ri-github-fill text-5xl"></i>
                 </a>
-                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Github</h2>
-                <a href="https://github.com/Karthikraut" target="_blank" rel="noopener noreferrer" className="mt-2 text-sm text-[#6556cd] dark:text-[#6556cd]">https://github.com/Karthikraut</a>
+                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-zinc-200">Github</h2>
+                <a href="https://github.com/Karthikraut" target="_blank" rel="noopener noreferrer" className="mt-2 text-sm text-zinc-200 hover:text-[#6556cd]">https://github.com/Karthikraut</a>
               </div>
 
               <div>
                 <a href="https://www.linkedin.com/in/karthik-raut-b5a6a7243/" target="_blank" rel="noopener noreferrer">
                   <i className="text-[#6556cd] ri-linkedin-fill text-5xl"></i>
                 </a>
-                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-white">Linked In</h2>
-                <a href="https://www.linkedin.com/in/karthik-raut-b5a6a7243/" target="_blank" rel="noopener noreferrer" className="mt-2 text-sm text-[#6556cd] dark:text-[#6556cd]">https://www.linkedin.com/in/karthik-raut-b5a6a7243/</a>
+                <h2 className="mt-4 text-base font-medium text-gray-800 dark:text-zinc-200">Linked In</h2>
+                <a href="https://www.linkedin.com/in/karthik-raut-b5a6a7243/" target="_blank" rel="noopener noreferrer" className="mt-2 text-sm text-zinc-200 hover:text-[#6556cd]">https://www.linkedin.com/in/karthik-raut-b5a6a7243/</a>
               </div>
             </div>
           </div>
