@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
@@ -6,6 +7,7 @@ const Contact = () => {
       <section className="bg-white p-10 m-4 dark:bg-gray-900">
         <div className="container px-6 mx-auto">
           <div>
+            <Link to={'/'} className="hover:text-[#6556CD] text-4xl p-4  text-zinc-400 ri-arrow-left-line absolute top-0 left-0"></Link>
             <p className="text-3xl font-bold text-[#6556cd] dark:text-[#6556cd]">Contact me</p>
             <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Connect with me.</h1>
             <p className="mt-3 text-gray-500 dark:text-gray-400">I will love to connect with you. Please contact me here!!</p>
