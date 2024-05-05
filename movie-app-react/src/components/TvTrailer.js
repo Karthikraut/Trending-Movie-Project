@@ -11,8 +11,9 @@ const TvTrailer = () => {
     const navigate = useNavigate();
 
   return (ytVideo.results.length >0)?(
-    <div className="absolute top-0 left-0 bg-[rgba(0,0,0,.8)] h-screen flex items-center justify-center w-screen overflow-x-hidden">
+    <div className="absolute top-0 left-0 bg-[rgba(0,0,0,.9)] h-screen flex items-center justify-center w-screen overflow-x-hidden">
         <ReactPlayer
+         controls
          height={720}
          width={1250}
          url={`https://www.youtube.com/watch?v=${ytVideo.results[0].key}`} />

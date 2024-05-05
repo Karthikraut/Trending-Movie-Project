@@ -17,7 +17,7 @@ const TvDetails = () => {
   useEffect(()=>{
     dispatch(asyncLoadTv(id));
     return ()=> {
-        (dispatch(removeTv))
+        (dispatch(removeTv()))
     }
   },[id])
   return (
