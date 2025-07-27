@@ -22,9 +22,6 @@
 - **Others:** React Infinite Scroll
 
 ---
-
-## 📸 Screenshots
-
 ## 📸 App Screenshots
 
 ### 🏠 Home Screen – Your Movie World Begins Here
