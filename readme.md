@@ -115,8 +115,9 @@ Feel free to fork this repository, open issues, or submit pull requests.
 ## 📧 Contact
 
 **Karthik Raut**  
-📫 [LinkedIn](https://www.linkedin.com/in/karthikraut/)  
-✉️ karthikraut@example.com
+📧 [karthikraut2@example.com](mailto:karthikraut2@gmail.com)  
+🌐 [LinkedIn](https://www.linkedin.com/in/karthik-raut-b5a6a7243) | [GitHub](https://github.com/Karthikraut)
+
 
 ---
 
